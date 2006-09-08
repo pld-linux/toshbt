@@ -1,18 +1,21 @@
 #TODO
+#- spec filename vs Name
 #- udev rules
 #- modprobe.d
-
+#
+# Conditional build:
 %bcond_without	dist_kernel	# allow non-distribution kernel
 %bcond_without	kernel		# don't build kernel modules
 %bcond_without	smp		# don't build SMP module
 %bcond_with	verbose		# verbose build (V=1)
-
+#
 %if %{without kernel}
 %undefine	with_dist_kernel
 %endif
 
 %define		_rel	1
-Summary:	Toshiba Laptop Bluetooth module.
+Summary:	Toshiba Laptop Bluetooth module
+Summary(pl):	Modu³ Bluetooth dla laptopów Toshiby
 Name:		toshbt
 Version:	1.0
 Release:	%{_rel}
@@ -29,12 +32,14 @@ BuildRequires:	rpmbuild(macros) >= 1.308
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Toshiba Laptop Bluetooth module.
 
 %description -l pl
+Modu³ Bluetooth dla laptopów Toshiby.
 
 %package -n kernel%{_alt_kernel}-misc-%{name}
-Summary:	Linux driver for Toshiba Laptop Bluetooth.
-Summary(pl):	Sterownik dla Linuksa dla Bluetooth w Laptopach Toshiba.
+Summary:	Linux driver for Toshiba Laptop Bluetooth
+Summary(pl):	Sterownik dla Linuksa dla Bluetooth w Laptopach Toshiba
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Base/Kernel
 Requires(post,postun):	/sbin/depmod
