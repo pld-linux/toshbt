@@ -26,7 +26,7 @@ URL:		http://0bits.com/
 %{?with_dist_kernel:BuildRequires:	kernel%{_alt_kernel}-module-build >= 3:2.6.14}
 BuildRequires:	rpmbuild(macros) >= 1.379
 %endif
-ExcludeArch:	ppc ppc64
+ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
