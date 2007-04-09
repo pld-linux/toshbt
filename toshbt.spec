@@ -23,7 +23,7 @@ Source0:	http://0bits.com/toshbt/toshbt-%{version}.tar.gz
 # Source0-md5:	8e4764f6c438427b00fb9aa93abb3cd7
 URL:		http://0bits.com/
 %if %{with kernel}
-%{?with_dist_kernel:BuildRequires:	kernel%{_alt_kernel}-module-build >= 3:2.6.14}
+%{?with_dist_kernel:BuildRequires:	kernel%{_alt_kernel}-module-build >= 3:2.6.20.2}
 BuildRequires:	rpmbuild(macros) >= 1.379
 %endif
 ExclusiveArch:	%{ix86} %{x8664}
