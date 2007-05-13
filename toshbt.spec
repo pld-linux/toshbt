@@ -10,7 +10,7 @@
 %undefine	with_dist_kernel
 %endif
 
-%define		_rel	2
+%define		_rel	3
 Summary:	Toshiba Laptop Bluetooth module
 Summary(pl.UTF-8):	Moduł Bluetooth dla laptopów Toshiby
 Name:		kernel%{_alt_kernel}-misc-toshbt
