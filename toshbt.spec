@@ -10,7 +10,7 @@
 %undefine	with_dist_kernel
 %endif
 
-%define		_rel	7
+%define		_rel	8
 Summary:	Toshiba Laptop Bluetooth module
 Summary(pl.UTF-8):	Moduł Bluetooth dla laptopów Toshiby
 Name:		kernel%{_alt_kernel}-misc-toshbt
@@ -40,11 +40,8 @@ Summary:	Linux driver for Toshiba Laptop Bluetooth
 Summary(pl.UTF-8):	Sterownik dla Linuksa dla Bluetooth w Laptopach Toshiba
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Base/Kernel
+%{?with_dist_kernel:%requires_releq_kernel}
 Requires(post,postun):	/sbin/depmod
-%if %{with dist_kernel}
-%requires_releq_kernel
-Requires(postun):	%releq_kernel
-%endif
 
 %description -n kernel%{_alt_kernel}-misc-%{name}
 This is driver for Bluetooth in Toshiba Laptops for Linux.
