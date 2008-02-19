@@ -10,12 +10,12 @@
 %undefine	with_dist_kernel
 %endif
 
-%define		_rel	16
+%define		rel	16
 Summary:	Toshiba Laptop Bluetooth module
 Summary(pl.UTF-8):	Moduł Bluetooth dla laptopów Toshiby
 Name:		toshbt
 Version:	1.0
-Release:	%{_rel}@%{_kernel_ver_str}
+Release:	%{rel}
 Epoch:		0
 License:	GPL
 Group:		Base/Kernel
@@ -38,7 +38,7 @@ Moduł Bluetooth dla laptopów Toshiby.
 %package -n kernel%{_alt_kernel}-misc-%{name}
 Summary:	Linux driver for Toshiba Laptop Bluetooth
 Summary(pl.UTF-8):	Sterownik dla Linuksa dla Bluetooth w Laptopach Toshiba
-Release:	%{_rel}@%{_kernel_ver_str}
+Release:	%{rel}@%{_kernel_ver_str}
 Group:		Base/Kernel
 %{?with_dist_kernel:%requires_releq_kernel}
 Requires:	module-init-tools >= 3.2.2-2
