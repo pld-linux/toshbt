@@ -10,7 +10,7 @@
 %undefine	with_dist_kernel
 %endif
 
-%define		rel	18
+%define		rel	19
 Summary:	Toshiba Laptop Bluetooth module
 Summary(pl.UTF-8):	Moduł Bluetooth dla laptopów Toshiby
 Name:		toshbt
